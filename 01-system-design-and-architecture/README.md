@@ -90,5 +90,3 @@ Full end-to-end designs, requirement-to-production:
 | Real-World Case Studies | ⚪ Not started |
 | Interview Prep | ⚪ Not started |
 
-*(Update this table as you publish — visible progress is itself a credibility
-signal for returning visitors.)*
