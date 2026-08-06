@@ -1,9 +1,7 @@
 # Real-World Case Studies
 
 Every file here follows [`_TEMPLATE.md`](./_TEMPLATE.md) — requirements
-through "what we'd do differently." Consistency of format matters here more
-than anywhere else in the repo: it's what makes this feel like a system, not
-a blog dump.
+through "what we'd do differently." 
 
 ## Checklist
 
@@ -15,9 +13,3 @@ a blog dump.
 - [ ] `design-a-flex-workspace-marketplace.md`
 - [ ] `design-a-vernacular-language-learning-platform.md` — B2B2C, school partnerships
 
-## Publishing order
-
-Lead with whichever you can write fastest with the most conviction — the
-payment platform and UPI simulator case studies are likely your strongest
-starting points since you have direct build experience and real numbers to
-draw on, not reconstructed ones.
