@@ -42,9 +42,9 @@ Everything here is free, and stays free — that's the point. If you want
 deeper structured content, cohort-based workshops, or hands-on advisory for
 your own system:
 
-- **Newsletter:** [link] — deep dives that don't fit in a README
-- **YouTube:** [link] — walkthroughs of the harder case studies
-- **Consulting / Advisory:** [FuturestaQ link] — for teams that want this
+- **Newsletter:** [coming soon] — deep dives that don't fit in a README
+- **YouTube:** [coming soon] — walkthroughs of the harder case studies
+- **Consulting / Advisory:** [https://futurestaq.com] — for teams that want this
   applied to their actual system, not just studied
 
 ## 🤝 Contributing
@@ -54,5 +54,4 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 📄 License
 
-[Choose a license — MIT recommended for maximum reuse/sharing, which is what
-drives stars and forks.]
+MIT
