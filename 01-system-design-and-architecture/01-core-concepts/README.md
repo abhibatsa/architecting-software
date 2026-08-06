@@ -1,7 +1,6 @@
 # Core Concepts
 
-Each concept below should be its own `.md` file (or folder if it needs
-diagrams). Suggested format for each:
+The format we will use for each:
 
 1. **What it is** (2-3 sentences, no fluff)
 2. **When it matters in production** (the part textbooks skip)
@@ -25,8 +24,7 @@ diagrams). Suggested format for each:
 - [ ] `load-balancing-strategies.md`
 - [ ] `database-replication-and-failover.md`
 
-Start with `idempotency-and-exactly-once-delivery.md` or
-`cap-and-pacelc-in-practice.md` — these are the two concepts candidates and
-engineers get most confidently wrong, and they're exactly the kind of "I
-learned this the hard way in production" content that differentiates this
+You can start with `idempotency-and-exactly-once-delivery.md` or
+`cap-and-pacelc-in-practice.md` — these are the two concepts engineers get most confidently wrong, 
+and they're exactly the kind of "I learned this the hard way in production" content that differentiates this
 repo from generic write-ups.
