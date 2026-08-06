@@ -1,7 +1,5 @@
 # Interview Prep
 
-This section reuses the case studies above rather than duplicating content —
-link back to `../04-real-world-case-studies` wherever a question overlaps.
 
 ## Checklist
 
@@ -16,7 +14,3 @@ link back to `../04-real-world-case-studies` wherever a question overlaps.
       how did you lead the team through it" matters as much as the design
       itself
 
-## Note
-
-Keep this section lighter than the case studies — its job is to be the
-fastest path *into* the deeper content, not to compete with it.
