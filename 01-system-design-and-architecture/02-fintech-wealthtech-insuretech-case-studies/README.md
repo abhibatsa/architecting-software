@@ -1,8 +1,7 @@
 # Fintech, Wealthtech & Insuretech Case Studies
 
-This is your strongest wedge — content nobody else can credibly write
-because it comes from systems actually built, not researched. Each case
-study should follow the same skeleton as
+Content written and curated from systems actually built, not researched. Each case
+study follows the same skeleton as
 [`../04-real-world-case-studies/_TEMPLATE.md`](../04-real-world-case-studies/_TEMPLATE.md).
 
 ## Checklist
@@ -20,7 +19,5 @@ study should follow the same skeleton as
 
 ## Note on compliance content
 
-Where a design touches KYC/AML/compliance, add a short disclaimer that this
-is architectural guidance, not legal/regulatory advice, and that regulations
-vary by jurisdiction and change over time. Keeps the content useful without
-overstating certainty on a fast-moving, jurisdiction-specific area.
+Disclaimer: This is an architectural guidance, not legal/regulatory advice, 
+and that regulations vary by jurisdiction and change over time. 
