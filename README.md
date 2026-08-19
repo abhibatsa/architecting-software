@@ -25,7 +25,7 @@ so you can star/fork only what you need.
 | 03 | Quality Engineering & SRE | 🔜 Wave 2 | Reliability engineering, SLOs, incident response |
 | 04 | Observability & Monitoring | 🔜 Wave 2 | Dashboards, tracing, alerting design |
 | 05 | DevSecOps | 🔜 Wave 2 | Secure CI/CD, shift-left security |
-| 06 | [R&D — ML, DL, AI & LLMs](https://github.com/abhibatsa/rnd-ai-ml-llm) | 🟢 Live | ML/DL fundamentals, data science, information retrieval, NLP/LLMs, agentic AI & GenAI, prompt engineering, case studies, interview prep — *consolidates what were originally two separate planned repos into one* |
+| 06 | [R&D — ML, DL, AI & LLMs](https://github.com/abhibatsa/rnd-ai-ml-llm) | 🟢 Live | ML/DL fundamentals, data science, information retrieval, NLP/LLMs, agentic AI & GenAI, prompt engineering, case studies, interview prep |
 | 07 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Ethical hacking, VAPT methodology |
 | 08 | Networking & OSI | 🔜 Wave 5 | Networking fundamentals for architects |
 | 09 | Linux for Engineers | 🔜 Wave 5 | Systems fundamentals |
