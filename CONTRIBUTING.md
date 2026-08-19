@@ -15,11 +15,11 @@ This repo is meant to be argued with, not just read.
 
 If you'd like to add a new problem, improve existing content, or fix errors:
 
-a. Fork the repository
-b. Create a feature branch: git checkout -b feature/your-feature-name
-c. Commit your changes: git commit -m 'Add feature changes'
-d. Push to the branch: git push origin feature/your-feature-name
-e. Submit a pull request
+1. Fork the repository
+2. Create a feature branch: git checkout -b feature/your-feature-name
+3. Commit your changes: git commit -m 'Add feature changes'
+4. Push to the branch: git push origin feature/your-feature-name
+5. Submit a pull request
 
 Once approved by the admin, your feature will be merged to the main/ master branch.
 
