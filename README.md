@@ -76,7 +76,7 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 1. Give the repo **Star**
 2. Share it with someone you know
 3. Post about it on Social Platforms - LinkedIn, Discord, Reddit
-4. Connect with us:
+4. Like, Share, Subscribe and Follow Me:
 
 [![YouTube](https://img.shields.io/badge/YouTube-Abhijeet%20Batsa-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@abhijeetbatsa)
 
