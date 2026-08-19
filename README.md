@@ -75,3 +75,5 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 ## 📄 License
 
 MIT
+
+[![Profile Views](https://komarev.com/ghpvc/?username=abhibatsa&color=blue&style=flat)](https://github.com/abhibatsa)
