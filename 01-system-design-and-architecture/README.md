@@ -70,6 +70,17 @@ Full end-to-end designs, requirement-to-production:
 - Leadership/behavioral stories mapped to architecture decisions (useful for
   Director/EM-level interviews where "why" matters as much as "what")
 
+### [06 — Database Fundamentals](./06-database-fundamentals)
+- ACID transactions, indexing, database types, scaling, replication, bloom
+  filters, active-active vs active-passive architectures
+- (SQL vs NoSQL and sharding live in `01-core-concepts` — cross-linked, not
+  duplicated)
+
+### [07 — Architectural Patterns](./07-architectural-patterns)
+- Client-server, event-driven, serverless, peer-to-peer
+- (Microservices architecture lives in `03-apis-and-microservices` —
+  cross-linked, not duplicated)
+
 ## 🧭 How to use this repo
 
 - New to system design → start at `01-core-concepts`
@@ -79,14 +90,20 @@ Full end-to-end designs, requirement-to-production:
 - Want the "why", not just the "what" → every case study includes a
   **trade-offs & what we'd do differently** section — that's the part most
   repos skip
+- Looking for a specific "X vs Y" decision → check
+  [`TRADEOFFS-INDEX.md`](./TRADEOFFS-INDEX.md) first, it cross-links every
+  comparison in the repo in one table
 
 ## ✍️ Content status
 
 | Section | Status |
 |---|---|
-| Core Concepts | 🟡 In progress |
+| Core Concepts | 🟡 In progress (5 of 13 published) |
 | Fintech/Wealthtech/Insuretech Case Studies | 🟡 In progress |
 | APIs & Microservices | ⚪ Not started |
 | Real-World Case Studies | ⚪ Not started |
 | Interview Prep | ⚪ Not started |
+| Database Fundamentals | ⚪ Not started |
+| Architectural Patterns | ⚪ Not started |
 
+-------- *** --------
