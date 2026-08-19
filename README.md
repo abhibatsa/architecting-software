@@ -25,13 +25,12 @@ so you can star/fork only what you need.
 | 03 | Quality Engineering & SRE | 🔜 Wave 2 | Reliability engineering, SLOs, incident response |
 | 04 | Observability & Monitoring | 🔜 Wave 2 | Dashboards, tracing, alerting design |
 | 05 | DevSecOps | 🔜 Wave 2 | Secure CI/CD, shift-left security |
-| 06 | Agentic AI & GenAI | 🔜 Wave 3 | Agent architecture, RAG, eval systems |
-| 07 | Prompt Engineering | 🔜 Wave 3 | Production prompting patterns |
-| 08 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Cybersecurity, Ethical hacking, VAPT methodology |
-| 09 | Networking & OSI | 🔜 Wave 5 | Networking fundamentals for architects |
-| 10 | Linux for Engineers | 🔜 Wave 5 | Systems fundamentals |
-| 11 | Python / Java / TypeScript for Architects | 🔜 Wave 5 | Language-level design patterns |
-| 12 | Automation — Playwright, App/Web, AI Automation | 🔜 Wave 5 | Test and workflow automation |
+| 06 | [R&D — ML, DL, AI & LLMs](https://github.com/abhibatsa/rnd-ai-ml-llm) | 🟢 Live | ML/DL fundamentals, data science, information retrieval, NLP/LLMs, agentic AI & GenAI, prompt engineering, case studies, interview prep — *consolidates what were originally two separate planned repos into one* |
+| 07 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Ethical hacking, VAPT methodology |
+| 08 | Networking & OSI | 🔜 Wave 5 | Networking fundamentals for architects |
+| 09 | Linux for Engineers | 🔜 Wave 5 | Systems fundamentals |
+| 10 | Python / Java / TypeScript for Architects | 🔜 Wave 5 | Language-level design patterns |
+| 11 | Automation — Playwright, App/Web, AI Automation | 🔜 Wave 5 | Test and workflow automation |
 
 > This repo is being built in public. Star it and follow along, or jump
 > straight to whichever spoke is live.
@@ -43,9 +42,30 @@ deeper structured content, cohort-based workshops, or hands-on advisory for
 your own system:
 
 - **Newsletter:** [coming soon] — deep dives that don't fit in a README
-- **YouTube:** [coming soon] — walkthroughs of the harder case studies
+- **YouTube:** [youtube.com/@abhijeetbatsa] — walkthroughs of the harder case studies
 - **Consulting / Advisory:** [https://futurestaq.com] — for teams that want this
   applied to their actual system, not just studied
+
+See also: [`RESOURCES.md`](./RESOURCES.md) — curated books, papers, and
+engineering blog posts worth your time beyond this repo.
+
+## 🪜 The wider repo family — career ladders
+
+This repo is the system design/architecture anchor. Sibling repos build
+out full career-prep ladders for other tracks:
+
+```
+Manual Tester
+   ↓
+sdet-automation-career-prep  → SDET / Automation Engineer / Sr / Lead
+   ↓
+ai-test-engineering-career-prep  → AI Test Engineer
+```
+
+- [`rnd-ai-ml-llm`](https://github.com/abhibatsa/rnd-ai-ml-llm) — ML/DL/AI/LLM reference layer, used across the AI-adjacent repos
+- [`sdet-automation-career-prep`](https://github.com/abhibatsa/sdet-automation-career-prep) — manual tester → SDET/Automation Engineer → Lead
+- [`ai-test-engineering-career-prep`](https://github.com/abhibatsa/ai-test-engineering-career-prep) — SDET → AI Test Engineer
+- More planned: `sde-career-prep`, `fde-career-prep`, `ai-engineer-career-prep`
 
 ## 🤝 Contributing
 
