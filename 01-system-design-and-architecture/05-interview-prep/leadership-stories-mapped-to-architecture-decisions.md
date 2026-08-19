@@ -75,7 +75,7 @@ incident to surface it.
 
 ---
 
-## Worked example 2 — [reconciliation engine / your next story]
+## Worked example 2 — [reconciliation engine / TODO]
 
 *(Architecture reference: link to the relevant case study once published)*
 
