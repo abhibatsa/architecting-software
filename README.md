@@ -78,12 +78,8 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 3. Post about it on Social Platforms - LinkedIn, Discord, Reddit
 4. Connect with us:
 
-<p>
-  <img src="https://jsdelivr.net" width="16" height="16" style="filter: invert(15%) sepia(95%) saturate(6934%) hue-rotate(358deg) brightness(95%) contrast(112%);" /> <b>YouTube:</b> <a href="https://youtube.com">youtube.com/@abhijeetbatsa</a>
-</p>
-<p>
-  <img src="https://jsdelivr.net" width="16" height="16" style="filter: invert(31%) sepia(84%) saturate(1906%) hue-rotate(195deg) brightness(93%) contrast(96%);" /> <b>LinkedIn:</b> <a href="https://linkedin.com">linkedin.com/in/abhijeetbatsa</a>
-</p>
+* <img src="https://jsdelivr.net" width="18" height="18" valign="middle" /> **YouTube:** [://youtube.com](https://://youtube.com)
+* <img src="https://jsdelivr.net" width="18" height="18" valign="middle" /> **LinkedIn:** [://linkedin.com](https://://linkedin.com)
 
 
 
