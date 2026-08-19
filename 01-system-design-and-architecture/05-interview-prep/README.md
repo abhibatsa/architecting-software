@@ -25,5 +25,4 @@ link back to `../04-real-world-case-studies` wherever a question overlaps.
 
 ## Note
 
-Keep this section lighter than the case studies — its job is to be the
-fastest path *into* the deeper content, not to compete with it.
+Practice this section once you are clear with `../01-core-concepts`.
