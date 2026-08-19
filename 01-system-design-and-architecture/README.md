@@ -106,4 +106,4 @@ Full end-to-end designs, requirement-to-production:
 | Database Fundamentals | ⚪ Not started |
 | Architectural Patterns | ⚪ Not started |
 
--------- *** --------
+------ *** ------
