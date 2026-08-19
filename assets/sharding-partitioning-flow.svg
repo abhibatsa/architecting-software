@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Sharding and partitioning flow</title>
+<desc>Shows a write request's key passing through a hash function and being routed to one of four database shards, with one shard highlighted as a hotspot receiving disproportionate traffic.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:sans-serif;fill:#2C2C2A;}
+.th{font-size:14px;font-weight:500;}
+.ts{font-size:12px;}
+.hash{fill:#EEEDFE;stroke:#534AB7;stroke-width:0.5;}
+.even{fill:#E1F5EE;stroke:#0F6E56;stroke-width:0.5;}
+.hot{fill:#FAEEDA;stroke:#854F0B;stroke-width:0.5;}
+line{stroke:#888780;stroke-width:1.5;marker-end:url(#arrow);}
+</style>
+
+<rect class="hash" x="30" y="130" width="130" height="56" rx="8"/>
+<text class="th" x="95" y="150" text-anchor="middle" dominant-baseline="central">Write request</text>
+<text class="ts" x="95" y="168" text-anchor="middle" dominant-baseline="central">key: user_842</text>
+
+<line x1="160" y1="158" x2="230" y2="158"/>
+
+<rect class="hash" x="230" y="130" width="130" height="56" rx="8"/>
+<text class="th" x="295" y="150" text-anchor="middle" dominant-baseline="central">Hash function</text>
+<text class="ts" x="295" y="168" text-anchor="middle" dominant-baseline="central">hash(key) % 4</text>
+
+<line x1="360" y1="150" x2="470" y2="60"/>
+<line x1="360" y1="155" x2="470" y2="130"/>
+<line x1="360" y1="162" x2="470" y2="200"/>
+<line x1="360" y1="168" x2="470" y2="270"/>
+
+<rect class="even" x="470" y="34" width="160" height="52" rx="8"/>
+<text class="th" x="550" y="52" text-anchor="middle" dominant-baseline="central">Shard 0</text>
+<text class="ts" x="550" y="70" text-anchor="middle" dominant-baseline="central">even load</text>
+
+<rect class="hot" x="470" y="104" width="160" height="52" rx="8"/>
+<text class="th" x="550" y="122" text-anchor="middle" dominant-baseline="central">Shard 1</text>
+<text class="ts" x="550" y="140" text-anchor="middle" dominant-baseline="central">hot — overloaded</text>
+
+<rect class="even" x="470" y="174" width="160" height="52" rx="8"/>
+<text class="th" x="550" y="192" text-anchor="middle" dominant-baseline="central">Shard 2</text>
+<text class="ts" x="550" y="210" text-anchor="middle" dominant-baseline="central">even load</text>
+
+<rect class="even" x="470" y="244" width="160" height="52" rx="8"/>
+<text class="th" x="550" y="262" text-anchor="middle" dominant-baseline="central">Shard 3</text>
+<text class="ts" x="550" y="280" text-anchor="middle" dominant-baseline="central">even load</text>
+
+<text class="ts" x="340" y="310" text-anchor="middle">A poorly chosen shard key sends disproportionate traffic to one shard, even with a hash function in place</text>
+</svg>
