@@ -20,14 +20,14 @@ so you can star/fork only what you need.
 
 | # | Repo | Status | Covers |
 |---|------|--------|--------|
-| 01 | [System Design & Architecture](./01-system-design-and-architecture) | 🟢 Live (Wave 1) | Core concepts, fintech/wealthtech/insuretech case studies, APIs & microservices, interview prep |
+| 01 | [System Design & Architecture](./01-system-design-and-architecture) | 🟢 Live (Wave 1) | Core concepts, database fundamentals, fintech/wealthtech/insuretech case studies, APIs & microservices, architectural patterns, interview prep |
 | 02 | Cloud Architecture | 🔜 Wave 2 | AWS/GCP/Azure patterns, multi-cloud, cost architecture |
 | 03 | Quality Engineering & SRE | 🔜 Wave 2 | Reliability engineering, SLOs, incident response |
 | 04 | Observability & Monitoring | 🔜 Wave 2 | Dashboards, tracing, alerting design |
 | 05 | DevSecOps | 🔜 Wave 2 | Secure CI/CD, shift-left security |
 | 06 | Agentic AI & GenAI | 🔜 Wave 3 | Agent architecture, RAG, eval systems |
 | 07 | Prompt Engineering | 🔜 Wave 3 | Production prompting patterns |
-| 08 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Ethical hacking, VAPT methodology |
+| 08 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Cybersecurity, Ethical hacking, VAPT methodology |
 | 09 | Networking & OSI | 🔜 Wave 5 | Networking fundamentals for architects |
 | 10 | Linux for Engineers | 🔜 Wave 5 | Systems fundamentals |
 | 11 | Python / Java / TypeScript for Architects | 🔜 Wave 5 | Language-level design patterns |
