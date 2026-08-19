@@ -1,6 +1,6 @@
 # Idempotency & exactly-once delivery
 
-**🎥 Video: coming soon** — [subscribe on YouTube](YOUR_CHANNEL_URL) to get notified when it's up · **Read time:** 3 min
+**🎥 Video: coming soon** — [subscribe on YouTube](https://www.youtube.com/@abhijeetbatsa) to get notified when it's up · **Read time:** 3 min
 
 ---
 
