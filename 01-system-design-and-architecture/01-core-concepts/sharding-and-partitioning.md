@@ -1,6 +1,6 @@
 # Sharding & partitioning
 
-**Watch (~1.5 min):** [YouTube link] · **Read time:** 3 min
+**Watch (~1.5 min):** [Coming Soon] · **Read time:** 3 min
 
 ---
 
