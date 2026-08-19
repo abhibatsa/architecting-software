@@ -45,7 +45,7 @@ attempt.
 - [`python-solutions.md`](./python-solutions.md)
 - [`java-solutions.md`](./java-solutions.md)
 
-## A note on Dev vs SDET framing
+## A note on Dev vs SDET framing(who is this for)
 
 Rather than maintaining two separate question banks, every problem here is
 tagged with both a **Dev focus** and an **SDET focus** column above. The
