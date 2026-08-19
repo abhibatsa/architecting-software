@@ -64,7 +64,7 @@ ai-test-engineering-career-prep  → AI Test Engineer
 
 - [`rnd-ai-ml-llm`](https://github.com/abhibatsa/rnd-ai-ml-llm) — ML/DL/AI/LLM reference layer, used across the AI-adjacent repos
 - [`sdet-automation-career-prep`](https://github.com/abhibatsa/sdet-automation-career-prep) — manual tester → SDET/Automation Engineer → Lead
-- [`ai-test-engineering-career-prep`](https://github.com/abhibatsa/ai-test-engineering-career-prep) — SDET → AI Test Engineer
+- [`ai-test-engineering-career-prep`](https://github.com/abhibatsa/ai-test-engineering-career-prep) [restricted access/ premium access] — SDET → AI Test Engineer
 - More planned: `sde-career-prep`, `fde-career-prep`, `ai-engineer-career-prep`
 
 ## 🤝 Contributing
