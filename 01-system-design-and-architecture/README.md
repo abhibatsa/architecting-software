@@ -102,7 +102,7 @@ Full end-to-end designs, requirement-to-production:
 | Fintech/Wealthtech/Insuretech Case Studies | 🟡 In progress |
 | APIs & Microservices | ⚪ Not started |
 | Real-World Case Studies | ⚪ Not started |
-| Interview Prep | ⚪ Not started |
+| Interview Prep | 🟡 In progress |
 | Database Fundamentals | ⚪ Not started |
 | Architectural Patterns | ⚪ Not started |
 
