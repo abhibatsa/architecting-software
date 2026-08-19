@@ -78,8 +78,8 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 3. Post about it on Social Platforms - LinkedIn, Discord, Reddit
 4. Connect with us:
 
-* <img src="https://jsdelivr.net" width="18" height="18" valign="middle" /> **YouTube:** [://youtube.com](https://://youtube.com)
-* <img src="https://jsdelivr.net" width="18" height="18" valign="middle" /> **LinkedIn:** [://linkedin.com](https://://linkedin.com)
+[![YouTube](https://img.shields.io/badge/YouTube-Abhijeet%20Batsa-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@abhijeetbatsa)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abhijeet%20Batsa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeetbatsa/)
 
 
 
