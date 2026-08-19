@@ -76,8 +76,10 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 1. Give the repo **Star**
 2. Share it with someone you know
 3. Post about it on Social Platforms - LinkedIn, Discord, Reddit
-4. Like, Share and Subscribe to our Youtube channel - ▶️ **YouTube:** [@abhijeetbatsa](https://youtube.com)
+4. Connect with us:
 
+* <img src="https://simpleicons.org" width="16" height="16" /> **YouTube:** [://youtube.com/@abhijeetbatsa](https://youtube.com/@abhijeetbatsa)
+* <img src="https://simpleicons.org" width="16" height="16" /> **LinkedIn:** [://linkedin.com/in/abhijeetbatsa](https://linkedin.com/in/abhijeetbatsa)
 
 
 ## 📄 License
