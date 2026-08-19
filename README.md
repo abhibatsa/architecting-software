@@ -79,6 +79,7 @@ issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 4. Connect with us:
 
 [![YouTube](https://img.shields.io/badge/YouTube-Abhijeet%20Batsa-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@abhijeetbatsa)
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Abhijeet%20Batsa-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeetbatsa/)
 
 
