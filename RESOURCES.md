@@ -41,7 +41,6 @@ For different angles than what's covered here — company-specific interview
 walkthroughs, broader DSA + system design coverage:
 
 - ByteByteGo
-- Gaurav Sen
 - System Design Interview (Study channel)
 
 ## How this list is maintained
