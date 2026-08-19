@@ -72,6 +72,13 @@ ai-test-engineering-career-prep  → AI Test Engineer
 Found a gap, a mistake, or have a real production war story to add? PRs and
 issues welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
+## Support the cause
+1. Give the repo **Star**
+2. Share it with someone you know
+3. Post about it on Social Platforms - LinkedIn, Discord, Reddit
+4. Like, Share and Subscribe to our Youtube channel - [![YouTube](https://shields.io)](https://youtube.com/@abhijeetbatsa)
+
+
 ## 📄 License
 
 MIT
