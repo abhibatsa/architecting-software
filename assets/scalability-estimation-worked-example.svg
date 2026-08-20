@@ -1,0 +1,61 @@
+<svg width="700" height="380" viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Back-of-envelope estimation: the four numbers and a worked example</title>
+<desc>Shows the four key numbers for back-of-envelope estimation (requests per second, storage growth per day, read-to-write ratio, peak-to-average multiplier), followed by a worked math trail converting 10 million requests per day into roughly 460 peak requests per second.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:11px;fill:#B4B4B4;}
+.box{stroke-width:1;}
+.purple{fill:#241E3D;stroke:#8C7DE0;}
+.teal{fill:#173829;stroke:#4CAF8C;}
+.amber{fill:#3A2A10;stroke:#E0A33D;}
+.boxlabel{font-size:13px;font-weight:600;fill:#F5F5F5;}
+.boxsub{font-size:11px;fill:#D0D0D0;}
+line{stroke:#9CA3AF;stroke-width:1.5;marker-end:url(#arrow);}
+</style>
+<rect x="0" y="0" width="700" height="380" fill="#0D1117"/>
+
+<text class="th" x="350" y="28" text-anchor="middle">The four numbers that get you 80% of the way there</text>
+
+<rect class="box purple" x="30" y="55" width="150" height="60" rx="8"/>
+<text class="boxlabel" x="105" y="78" text-anchor="middle" dominant-baseline="central">Requests/sec</text>
+<text class="boxsub" x="105" y="96" text-anchor="middle" dominant-baseline="central">avg and peak</text>
+
+<rect class="box purple" x="195" y="55" width="150" height="60" rx="8"/>
+<text class="boxlabel" x="270" y="78" text-anchor="middle" dominant-baseline="central">Storage/day</text>
+<text class="boxsub" x="270" y="96" text-anchor="middle" dominant-baseline="central">growth rate</text>
+
+<rect class="box purple" x="360" y="55" width="150" height="60" rx="8"/>
+<text class="boxlabel" x="435" y="78" text-anchor="middle" dominant-baseline="central">Read:write ratio</text>
+<text class="boxsub" x="435" y="96" text-anchor="middle" dominant-baseline="central">shapes the DB choice</text>
+
+<rect class="box purple" x="525" y="55" width="150" height="60" rx="8"/>
+<text class="boxlabel" x="600" y="78" text-anchor="middle" dominant-baseline="central">Peak multiplier</text>
+<text class="boxsub" x="600" y="96" text-anchor="middle" dominant-baseline="central">typically 3-5x avg</text>
+
+<line x1="30" y1="140" x2="670" y2="140" stroke="#30363D" stroke-width="1"/>
+
+<text class="th" x="350" y="165" text-anchor="middle">Worked example: 1M DAU, 10 requests/user/day</text>
+
+<rect class="box teal" x="30" y="190" width="140" height="50" rx="8"/>
+<text class="boxlabel" x="100" y="208" text-anchor="middle" dominant-baseline="central">10M req/day</text>
+<text class="boxsub" x="100" y="224" text-anchor="middle" dominant-baseline="central">1M users × 10</text>
+
+<line x1="170" y1="215" x2="230" y2="215"/>
+<text class="ts" x="200" y="203" text-anchor="middle">÷86,400s</text>
+<rect class="box teal" x="230" y="190" width="140" height="50" rx="8"/>
+<text class="boxlabel" x="300" y="208" text-anchor="middle" dominant-baseline="central">~115 RPS</text>
+<text class="boxsub" x="300" y="224" text-anchor="middle" dominant-baseline="central">average</text>
+
+<line x1="370" y1="215" x2="430" y2="215"/>
+<text class="ts" x="400" y="203" text-anchor="middle">×4 peak</text>
+<rect class="box amber" x="430" y="190" width="140" height="50" rx="8"/>
+<text class="boxlabel" x="500" y="208" text-anchor="middle" dominant-baseline="central">~460 RPS</text>
+<text class="boxsub" x="500" y="224" text-anchor="middle" dominant-baseline="central">peak — design for this</text>
+
+<line x1="570" y1="215" x2="600" y2="215" stroke="none"/>
+
+<text class="ts" x="350" y="290" text-anchor="middle">Designing for the average (115) instead of the peak (~460) is the</text>
+<text class="ts" x="350" y="308" text-anchor="middle">single most common estimation mistake — the system falls over exactly when it matters most.</text>
+</svg>
