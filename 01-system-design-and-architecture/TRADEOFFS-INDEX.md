@@ -11,10 +11,17 @@ write-up actually lives.
 | REST vs gRPC vs GraphQL | [`03-apis-and-microservices`](./03-apis-and-microservices) | 🔜 Not yet published |
 | Vertical vs horizontal scaling | [`01-core-concepts`](./01-core-concepts) | 🔜 Not yet published |
 | Range-based vs hash-based vs geo-based sharding | [`01-core-concepts`](./01-core-concepts/sharding-and-partitioning.md) | ✅ Published (covered within the sharding post) |
-| Sync vs async replication | [`01-core-concepts`](./01-core-concepts/database-replication-and-failover.md) | ✅ Published |
+| Sync vs async vs semi-sync replication | [`01-core-concepts`](./01-core-concepts/database-replication-and-failover.md) | ✅ Published |
+| Single-leader vs multi-leader vs leaderless replication | [`01-core-concepts`](./01-core-concepts/database-replication-and-failover.md) | ✅ Published (covered within the replication post) |
 | Queues vs streams | [`01-core-concepts`](./01-core-concepts/messaging-queues-vs-streams.md) | ✅ Published |
 | CAP vs PACELC (partition vs normal-operation trade-offs) | [`01-core-concepts`](./01-core-concepts/cap-and-pacelc-in-practice.md) | ✅ Published |
-| Read-through vs write-through caching | [`01-core-concepts`](./01-core-concepts/caching-patterns-and-invalidation.md) | ✅ Published (covered within the caching post) |
+| Cache-aside vs write-through vs write-behind | [`01-core-concepts`](./01-core-concepts/caching-patterns-and-invalidation.md) | ✅ Published |
+| LRU vs LFU cache eviction | [`01-core-concepts`](./01-core-concepts/caching-patterns-and-invalidation.md) | ✅ Published (covered within the caching post) |
+| Token bucket vs leaky bucket vs fixed/sliding window (rate limiting) | [`01-core-concepts`](./01-core-concepts/rate-limiting-and-backpressure.md) | ✅ Published |
+| Rate limiting vs backpressure | [`01-core-concepts`](./01-core-concepts/rate-limiting-and-backpressure.md) | ✅ Published (covered within the same post) |
+| Redis-based locks vs ZooKeeper/etcd coordination | [`01-core-concepts`](./01-core-concepts/distributed-locking-and-coordination.md) | ✅ Published |
+| Round robin vs least connections vs consistent hashing (load balancing) | [`01-core-concepts`](./01-core-concepts/load-balancing-strategies.md) | ✅ Published |
+| Layer 4 vs Layer 7 load balancing | [`01-core-concepts`](./01-core-concepts/load-balancing-strategies.md) | ✅ Published (covered within the same post) |
 | Batch vs stream processing | [`01-core-concepts`](./01-core-concepts) | 🔜 Not yet published |
 | Stateful vs stateless design | [`07-architectural-patterns`](./07-architectural-patterns) | 🔜 Not yet published |
 | Push vs pull architecture | [`07-architectural-patterns`](./07-architectural-patterns) | 🔜 Not yet published |
