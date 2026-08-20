@@ -22,6 +22,8 @@ given enough time with no new writes, every replica converges to the same
 value. The payoff is speed and availability: you're not blocked waiting for
 every node to agree before responding.
 
+![Strong vs eventual vs read-your-own-writes consistency](../../assets/consistency-strong-vs-eventual.svg)
+
 Neither is "better." They're a trade between correctness-under-concurrency
 and latency/availability, and the right answer changes per data type, not
 per system.

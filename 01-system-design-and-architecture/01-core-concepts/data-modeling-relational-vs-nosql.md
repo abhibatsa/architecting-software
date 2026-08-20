@@ -25,6 +25,8 @@ join to compute. The cost: you paid for that speed by deciding your query
 patterns in advance. Change the access pattern later, and you're reshaping
 the whole model.
 
+![Relational normalized tables vs NoSQL denormalized document](../../assets/data-modeling-relational-vs-nosql.svg)
+
 ## The decision rule that actually matters
 
 Ask one question: **are your access patterns known and stable, or unknown

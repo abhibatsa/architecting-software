@@ -46,6 +46,8 @@ ratio is 3-5x for consumer apps (higher for anything with predictable spikes
 ≈ 460 requests/second at peak
 ```
 
+![The four numbers and a worked estimation example](../../assets/scalability-estimation-worked-example.svg)
+
 That single multiplier is the difference between a system that falls over
 during your busiest hour and one that doesn't. If you designed for 115 RPS
 because that's what the average said, you built a system that fails exactly
