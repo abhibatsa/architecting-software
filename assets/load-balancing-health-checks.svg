@@ -1,0 +1,53 @@
+<svg width="680" height="340" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Load balancer with health checks routing to backend servers</title>
+<desc>Shows a load balancer distributing requests across three backend servers, with one server marked unhealthy and removed from rotation after failing a health check.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:12px;fill:#B4B4B4;}
+.box{stroke-width:1;}
+.teal{fill:#173829;stroke:#4CAF8C;}
+.red{fill:#3A1E1E;stroke:#D97070;}
+.purple{fill:#241E3D;stroke:#8C7DE0;}
+.boxlabel{font-size:14px;font-weight:600;fill:#F5F5F5;}
+.boxsub{font-size:12px;fill:#D0D0D0;}
+line{stroke:#9CA3AF;stroke-width:1.5;marker-end:url(#arrow);}
+.dashed{stroke-dasharray:5,4;marker-end:none;stroke:#D97070;}
+</style>
+<rect x="0" y="0" width="680" height="340" fill="#0D1117"/>
+
+<text class="th" x="340" y="30" text-anchor="middle">Load balancer with health checks</text>
+
+<rect class="box purple" x="30" y="120" width="150" height="60" rx="8"/>
+<text class="boxlabel" x="105" y="140" text-anchor="middle" dominant-baseline="central">Load Balancer</text>
+<text class="boxsub" x="105" y="158" text-anchor="middle" dominant-baseline="central">least connections</text>
+
+<line x1="180" y1="140" x2="280" y2="70"/>
+<rect class="box teal" x="280" y="45" width="170" height="50" rx="8"/>
+<text class="boxlabel" x="365" y="63" text-anchor="middle" dominant-baseline="central">Server A</text>
+<text class="boxsub" x="365" y="79" text-anchor="middle" dominant-baseline="central">healthy — 12 conns</text>
+
+<line x1="180" y1="150" x2="280" y2="150"/>
+<rect class="box teal" x="280" y="125" width="170" height="50" rx="8"/>
+<text class="boxlabel" x="365" y="143" text-anchor="middle" dominant-baseline="central">Server B</text>
+<text class="boxsub" x="365" y="159" text-anchor="middle" dominant-baseline="central">healthy — 8 conns</text>
+
+<line x1="180" y1="165" x2="280" y2="230" class="dashed"/>
+<rect class="box red" x="280" y="205" width="170" height="50" rx="8"/>
+<text class="boxlabel" x="365" y="223" text-anchor="middle" dominant-baseline="central">Server C</text>
+<text class="boxsub" x="365" y="239" text-anchor="middle" dominant-baseline="central">unhealthy — removed</text>
+
+<line x1="450" y1="70" x2="540" y2="70"/>
+<line x1="450" y1="150" x2="540" y2="150"/>
+<rect class="box purple" x="540" y="30" width="120" height="160" rx="8"/>
+<text class="boxlabel" x="600" y="60" text-anchor="middle" dominant-baseline="central">Health</text>
+<text class="boxlabel" x="600" y="80" text-anchor="middle" dominant-baseline="central">check</text>
+<text class="boxsub" x="600" y="105" text-anchor="middle" dominant-baseline="central">deep check:</text>
+<text class="boxsub" x="600" y="120" text-anchor="middle" dominant-baseline="central">reaches DB,</text>
+<text class="boxsub" x="600" y="135" text-anchor="middle" dominant-baseline="central">not just</text>
+<text class="boxsub" x="600" y="150" text-anchor="middle" dominant-baseline="central">process ping</text>
+
+<text class="ts" x="340" y="290" text-anchor="middle">A shallow health check (process responds) can miss a server that's up but functionally broken.</text>
+<text class="ts" x="340" y="308" text-anchor="middle">A deep check (can it reach its own dependencies) catches what a shallow one misses.</text>
+</svg>

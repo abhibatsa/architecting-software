@@ -1,0 +1,59 @@
+<svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Distributed lock pause problem and fencing token fix</title>
+<desc>Shows a process acquiring a lock, pausing long enough for the lock to expire, a second process acquiring the lock and getting a higher fencing token, and the resource rejecting the first process's stale write because its fencing token is lower.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:12px;fill:#B4B4B4;}
+.box{stroke-width:1;}
+.teal{fill:#173829;stroke:#4CAF8C;}
+.red{fill:#3A1E1E;stroke:#D97070;}
+.purple{fill:#241E3D;stroke:#8C7DE0;}
+.amber{fill:#3A2A10;stroke:#E0A33D;}
+.boxlabel{font-size:13px;font-weight:600;fill:#F5F5F5;}
+.boxsub{font-size:11px;fill:#D0D0D0;}
+line{stroke:#9CA3AF;stroke-width:1.5;marker-end:url(#arrow);}
+</style>
+<rect x="0" y="0" width="680" height="420" fill="#0D1117"/>
+
+<text class="th" x="115" y="28" text-anchor="middle">A acquires lock, pauses</text>
+<rect class="box purple" x="30" y="45" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="115" y="62" text-anchor="middle" dominant-baseline="central">Process A</text>
+<text class="boxsub" x="115" y="78" text-anchor="middle" dominant-baseline="central">acquires lock, token=1</text>
+
+<line x1="115" y1="87" x2="115" y2="120"/>
+<rect class="box amber" x="30" y="120" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="115" y="137" text-anchor="middle" dominant-baseline="central">Long GC pause</text>
+<text class="boxsub" x="115" y="153" text-anchor="middle" dominant-baseline="central">TTL expires while paused</text>
+
+<text class="th" x="335" y="28" text-anchor="middle">B acquires lock while A is paused</text>
+<rect class="box purple" x="250" y="45" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="335" y="62" text-anchor="middle" dominant-baseline="central">Process B</text>
+<text class="boxsub" x="335" y="78" text-anchor="middle" dominant-baseline="central">acquires lock, token=2</text>
+
+<line x1="335" y1="87" x2="335" y2="120"/>
+<rect class="box teal" x="250" y="120" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="335" y="137" text-anchor="middle" dominant-baseline="central">Writes to resource</text>
+<text class="boxsub" x="335" y="153" text-anchor="middle" dominant-baseline="central">presents token=2</text>
+
+<line x1="115" y1="162" x2="115" y2="230"/>
+<rect class="box red" x="30" y="230" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="115" y="247" text-anchor="middle" dominant-baseline="central">A wakes up</text>
+<text class="boxsub" x="115" y="263" text-anchor="middle" dominant-baseline="central">still believes it holds lock</text>
+
+<line x1="115" y1="272" x2="115" y2="310"/>
+<rect class="box red" x="30" y="310" width="170" height="42" rx="8"/>
+<text class="boxlabel" x="115" y="327" text-anchor="middle" dominant-baseline="central">A tries to write</text>
+<text class="boxsub" x="115" y="343" text-anchor="middle" dominant-baseline="central">presents stale token=1</text>
+
+<line x1="335" y1="162" x2="335" y2="310"/>
+<rect class="box amber" x="250" y="310" width="170" height="60" rx="8"/>
+<text class="boxlabel" x="335" y="328" text-anchor="middle" dominant-baseline="central">Resource checks token</text>
+<text class="boxsub" x="335" y="344" text-anchor="middle" dominant-baseline="central">token 1 &lt; last seen (2)</text>
+<text class="boxsub" x="335" y="358" text-anchor="middle" dominant-baseline="central">→ A's write is rejected</text>
+
+<line x1="200" y1="331" x2="248" y2="331"/>
+
+<text class="ts" x="340" y="400" text-anchor="middle">Fencing tokens don't stop the lock from lying — they stop the resource from trusting a stale holder.</text>
+</svg>

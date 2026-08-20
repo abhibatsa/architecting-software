@@ -1,0 +1,44 @@
+<svg width="680" height="360" viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Outbox pattern for transactional messaging</title>
+<desc>Shows a single database transaction writing both the business record and an outbox event row atomically, with a separate poller process publishing the event to a message broker afterward.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:12px;fill:#B4B4B4;}
+.box{stroke-width:1;}
+.teal{fill:#173829;stroke:#4CAF8C;}
+.purple{fill:#241E3D;stroke:#8C7DE0;}
+.boxlabel{font-size:14px;font-weight:600;fill:#F5F5F5;}
+.boxsub{font-size:12px;fill:#D0D0D0;}
+line{stroke:#9CA3AF;stroke-width:1.5;marker-end:url(#arrow);}
+</style>
+<rect x="0" y="0" width="680" height="360" fill="#0D1117"/>
+
+<text class="th" x="340" y="30" text-anchor="middle">One transaction, two tables — atomic together</text>
+
+<rect x="60" y="55" width="300" height="140" rx="10" fill="none" stroke="#8C7DE0" stroke-width="1.5" stroke-dasharray="5,4"/>
+<text class="ts" x="210" y="75" text-anchor="middle">BEGIN TRANSACTION</text>
+
+<rect class="box teal" x="80" y="90" width="260" height="42" rx="8"/>
+<text class="boxlabel" x="210" y="106" text-anchor="middle" dominant-baseline="central">INSERT orders</text>
+<text class="boxsub" x="210" y="122" text-anchor="middle" dominant-baseline="central">the business fact</text>
+
+<rect class="box teal" x="80" y="142" width="260" height="42" rx="8"/>
+<text class="boxlabel" x="210" y="158" text-anchor="middle" dominant-baseline="central">INSERT outbox_events</text>
+<text class="boxsub" x="210" y="174" text-anchor="middle" dominant-baseline="central">the event about it</text>
+
+<text class="ts" x="210" y="210" text-anchor="middle">COMMIT — both succeed or both fail</text>
+
+<line x1="210" y1="225" x2="210" y2="255"/>
+<rect class="box purple" x="90" y="255" width="240" height="46" rx="8"/>
+<text class="boxlabel" x="210" y="272" text-anchor="middle" dominant-baseline="central">Poller / CDC process</text>
+<text class="boxsub" x="210" y="288" text-anchor="middle" dominant-baseline="central">reads new outbox rows</text>
+
+<line x1="330" y1="278" x2="430" y2="278"/>
+<rect class="box teal" x="430" y="255" width="200" height="46" rx="8"/>
+<text class="boxlabel" x="530" y="272" text-anchor="middle" dominant-baseline="central">Message broker</text>
+<text class="boxsub" x="530" y="288" text-anchor="middle" dominant-baseline="central">event published, retriable</text>
+
+<text class="ts" x="340" y="335" text-anchor="middle">The publish step can fail and retry safely — the event's existence is already durably committed</text>
+</svg>

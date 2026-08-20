@@ -1,0 +1,58 @@
+<svg width="680" height="360" viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Cache-aside pattern with TTL invalidation</title>
+<desc>Shows a cache-aside read flow: cache miss leads to a database read and cache population, while a cache hit returns immediately; a separate TTL expiry path shows the entry going stale and being evicted.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#E6E6E6;}
+.th{font-size:14px;font-weight:600;}
+.ts{font-size:12px;fill:#B4B4B4;}
+.box{stroke-width:1;}
+.teal{fill:#173829;stroke:#4CAF8C;}
+.red{fill:#3A1E1E;stroke:#D97070;}
+.purple{fill:#241E3D;stroke:#8C7DE0;}
+.boxlabel{font-size:14px;font-weight:600;fill:#F5F5F5;}
+.boxsub{font-size:12px;fill:#D0D0D0;}
+line{stroke:#9CA3AF;stroke-width:1.5;marker-end:url(#arrow);}
+</style>
+<rect x="0" y="0" width="680" height="360" fill="#0D1117"/>
+
+<text class="th" x="340" y="30" text-anchor="middle">Cache-aside: hit vs miss</text>
+
+<rect class="box purple" x="30" y="60" width="120" height="48" rx="8"/>
+<text class="boxlabel" x="90" y="84" text-anchor="middle" dominant-baseline="central">Client</text>
+<line x1="150" y1="84" x2="230" y2="84"/>
+<rect class="box teal" x="230" y="60" width="140" height="48" rx="8"/>
+<text class="boxlabel" x="300" y="78" text-anchor="middle" dominant-baseline="central">Cache: HIT</text>
+<text class="boxsub" x="300" y="94" text-anchor="middle" dominant-baseline="central">return immediately</text>
+<line x1="370" y1="84" x2="450" y2="84"/>
+<rect class="box teal" x="450" y="60" width="150" height="48" rx="8"/>
+<text class="boxlabel" x="525" y="84" text-anchor="middle" dominant-baseline="central">Fast response</text>
+
+<line x1="90" y1="108" x2="90" y2="160"/>
+<rect class="box purple" x="30" y="160" width="120" height="48" rx="8"/>
+<text class="boxlabel" x="90" y="184" text-anchor="middle" dominant-baseline="central">Client</text>
+<line x1="150" y1="184" x2="230" y2="184"/>
+<rect class="box red" x="230" y="160" width="140" height="48" rx="8"/>
+<text class="boxlabel" x="300" y="178" text-anchor="middle" dominant-baseline="central">Cache: MISS</text>
+<text class="boxsub" x="300" y="194" text-anchor="middle" dominant-baseline="central">query the DB</text>
+<line x1="370" y1="184" x2="450" y2="184"/>
+<rect class="box red" x="450" y="160" width="150" height="48" rx="8"/>
+<text class="boxlabel" x="525" y="178" text-anchor="middle" dominant-baseline="central">Database</text>
+<text class="boxsub" x="525" y="194" text-anchor="middle" dominant-baseline="central">slower response</text>
+<line x1="525" y1="208" x2="300" y2="240" class="arr"/>
+<text class="ts" x="410" y="230" text-anchor="middle">populate cache</text>
+
+<line x1="40" y1="255" x2="640" y2="255" stroke="#30363D" stroke-width="1"/>
+
+<text class="th" x="340" y="280" text-anchor="middle">TTL expiry</text>
+<rect class="box teal" x="60" y="300" width="160" height="44" rx="8"/>
+<text class="boxlabel" x="140" y="322" text-anchor="middle" dominant-baseline="central">Cached entry</text>
+<line x1="220" y1="322" x2="300" y2="322"/>
+<text class="ts" x="260" y="310" text-anchor="middle">TTL expires</text>
+<rect class="box red" x="300" y="300" width="160" height="44" rx="8"/>
+<text class="boxlabel" x="380" y="322" text-anchor="middle" dominant-baseline="central">Evicted</text>
+<line x1="460" y1="322" x2="540" y2="322"/>
+<text class="ts" x="500" y="310" text-anchor="middle">next read</text>
+<rect class="box red" x="540" y="300" width="120" height="44" rx="8"/>
+<text class="boxlabel" x="600" y="322" text-anchor="middle" dominant-baseline="central">MISS again</text>
+</svg>
