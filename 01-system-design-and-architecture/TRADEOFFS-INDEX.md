@@ -11,8 +11,10 @@ write-up actually lives.
 | REST vs gRPC vs GraphQL | [`03-apis-and-microservices`](./03-apis-and-microservices) | 🔜 Not yet published |
 | Vertical vs horizontal scaling | [`01-core-concepts`](./01-core-concepts) | 🔜 Not yet published |
 | Range-based vs hash-based vs geo-based sharding | [`01-core-concepts`](./01-core-concepts/sharding-and-partitioning.md) | ✅ Published (covered within the sharding post) |
-| Sync vs async replication | [`06-database-fundamentals`](./06-database-fundamentals) | 🔜 Not yet published |
-| Read-through vs write-through caching | [`01-core-concepts`](./01-core-concepts) | 🔜 Not yet published |
+| Sync vs async replication | [`01-core-concepts`](./01-core-concepts/database-replication-and-failover.md) | ✅ Published |
+| Queues vs streams | [`01-core-concepts`](./01-core-concepts/messaging-queues-vs-streams.md) | ✅ Published |
+| CAP vs PACELC (partition vs normal-operation trade-offs) | [`01-core-concepts`](./01-core-concepts/cap-and-pacelc-in-practice.md) | ✅ Published |
+| Read-through vs write-through caching | [`01-core-concepts`](./01-core-concepts/caching-patterns-and-invalidation.md) | ✅ Published (covered within the caching post) |
 | Batch vs stream processing | [`01-core-concepts`](./01-core-concepts) | 🔜 Not yet published |
 | Stateful vs stateless design | [`07-architectural-patterns`](./07-architectural-patterns) | 🔜 Not yet published |
 | Push vs pull architecture | [`07-architectural-patterns`](./07-architectural-patterns) | 🔜 Not yet published |
