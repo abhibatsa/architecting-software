@@ -32,6 +32,8 @@ overwhelming shared resources.
   output rate, regardless of burstiness on input — smooths traffic out
   rather than allowing bursts through.
 
+![Token bucket rate limiting](../../assets/rate-limiting-token-bucket.svg)
+
 ## Backpressure
 
 A mechanism for a system to signal "slow down" to something feeding it
@@ -63,7 +65,8 @@ they've been throttled.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

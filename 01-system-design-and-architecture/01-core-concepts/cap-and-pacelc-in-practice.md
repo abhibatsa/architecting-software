@@ -35,6 +35,8 @@ a real trade-off happening: consistency vs latency. PACELC captures both:
 > **If Partition, choose Availability or Consistency; Else (normal
 > operation), choose Latency or Consistency.**
 
+![PACELC decision tree](../../assets/cap-pacelc-decision-tree.svg)
+
 This is the more honest framing, because it forces you to also answer:
 even when everything's healthy, are you willing to wait for a
 consistency-guaranteeing round-trip (like a quorum write), or do you want
@@ -59,7 +61,8 @@ not a single CAP classification stamped on the whole architecture.
 
 ## What we'd do differently
 
-*ToDO*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

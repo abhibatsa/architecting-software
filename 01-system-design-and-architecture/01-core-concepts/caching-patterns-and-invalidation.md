@@ -9,6 +9,8 @@ naming things, and off-by-one errors. The joke lands because it's true —
 caching itself is easy. Knowing when a cached value is wrong is the actual
 skill.
 
+![Cache-aside pattern with TTL invalidation](../../assets/caching-cache-aside-flow.svg)
+
 ## The core patterns
 
 **Cache-aside (lazy loading):** application checks cache first, on a miss
@@ -60,7 +62,8 @@ policy) handles that case better, at the cost of more bookkeeping.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

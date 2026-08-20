@@ -9,6 +9,8 @@ design advice — and it glosses over a real decision: a message queue and
 an event stream solve different problems, and picking the wrong one shows
 up as pain months later, not immediately.
 
+![Message queue vs event stream](../../assets/messaging-queues-vs-streams.svg)
+
 ## Queues (RabbitMQ, SQS, ActiveMQ)
 
 A message is delivered to **one consumer**, then it's gone — consumed and
@@ -58,7 +60,8 @@ eventually happen.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

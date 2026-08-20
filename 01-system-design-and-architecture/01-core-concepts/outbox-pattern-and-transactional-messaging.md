@@ -35,6 +35,8 @@ BEGIN TRANSACTION
 COMMIT
 ```
 
+![Outbox pattern for transactional messaging](../../assets/outbox-pattern-flow.svg)
+
 Both inserts succeed or fail together — normal ACID transaction
 guarantees, no distributed transaction needed. A separate process (a
 poller, or a database change-data-capture stream like Debezium) then reads
@@ -67,7 +69,8 @@ that grows forever becomes its own performance problem.
 
 ## What we'd do differently
 
-*ToDO*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

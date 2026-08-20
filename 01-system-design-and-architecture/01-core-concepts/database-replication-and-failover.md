@@ -39,6 +39,8 @@ Most production systems land on a middle ground — **semi-synchronous**:
 wait for at least one replica to confirm (not all), balancing latency
 against durability.
 
+![Single-leader replication and failover](../../assets/database-replication-failover.svg)
+
 ## Failover: where the real complexity lives
 
 When the leader dies, something has to happen automatically, or you're
@@ -71,7 +73,8 @@ applied specifically to the replication layer.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

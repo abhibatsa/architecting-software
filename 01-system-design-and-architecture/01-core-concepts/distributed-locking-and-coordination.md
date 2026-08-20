@@ -41,6 +41,8 @@ expire. The lock system, having no way to know the process is still
 original process resumes, still believing it holds the lock, and now two
 processes are both acting as if they have exclusive access.
 
+![Distributed lock pause problem and fencing token fix](../../assets/distributed-locking-fencing-tokens.svg)
+
 This is why naive `SETNX`-with-TTL locks are risky for anything where a
 double-execution would be genuinely harmful (e.g., double-charging,
 double-shipping) — the lock protects against the common case, not the
@@ -66,7 +68,8 @@ double-execution has real consequences.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 

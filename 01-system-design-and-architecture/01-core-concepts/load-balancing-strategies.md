@@ -44,7 +44,11 @@ necessary for anything beyond simple traffic splitting.
 ## Health checks: the part that actually prevents outages
 
 A load balancer is only as good as its ability to detect an unhealthy
-backend and stop routing to it. Two failure modes to design against:
+backend and stop routing to it.
+
+![Load balancer with health checks routing to backend servers](../../assets/load-balancing-health-checks.svg)
+
+Two failure modes to design against:
 
 - **False negatives (marking a healthy server unhealthy):** too aggressive
   a health check (e.g. failing on a single slow response) can pull healthy
@@ -68,7 +72,8 @@ serve any session, instead of hard-pinning by IP.
 
 ## What we'd do differently
 
-*ToDo*
+*(Fill this in with a real story once you've shipped this in production —
+this section is what separates the post from a textbook definition.)*
 
 ---
 
