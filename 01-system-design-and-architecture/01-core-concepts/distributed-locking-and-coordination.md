@@ -66,8 +66,7 @@ double-execution has real consequences.
 
 ## What we'd do differently
 
-*(Fill this in with a real story once you've shipped this in production —
-this section is what separates the post from a textbook definition.)*
+*ToDo*
 
 ---
 
