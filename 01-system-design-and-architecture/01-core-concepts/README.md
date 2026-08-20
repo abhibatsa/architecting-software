@@ -15,14 +15,14 @@ Each topic also has a matching short video — see the 🎥 column below.
 | Consistency models: strong vs eventual | [Read →](./consistency-models-strong-vs-eventual.md) | 🎥 Coming soon |
 | Data modeling: relational vs NoSQL | [Read →](./data-modeling-relational-vs-nosql.md) | 🎥 Coming soon |
 | Sharding & partitioning | [Read →](./sharding-and-partitioning.md) | 🎥 Coming soon |
-| Caching patterns & invalidation | 🔜 Not yet published | — |
-| Messaging: queues vs streams | 🔜 Not yet published | — |
-| Outbox pattern & transactional messaging | 🔜 Not yet published | — |
-| CAP & PACELC in practice | 🔜 Not yet published | — |
-| Rate limiting & backpressure | 🔜 Not yet published | — |
-| Distributed locking & coordination | 🔜 Not yet published | — |
-| Load balancing strategies | 🔜 Not yet published | — |
-| Database replication & failover | 🔜 Not yet published | — |
+| Caching patterns & invalidation | [Read →](./caching-patterns-and-invalidation.md) | 🎥 Coming soon |
+| Messaging: queues vs streams | [Read →](./messaging-queues-vs-streams.md) | 🎥 Coming soon |
+| Outbox pattern & transactional messaging | [Read →](./outbox-pattern-and-transactional-messaging.md) | 🎥 Coming soon |
+| CAP & PACELC in practice | [Read →](./cap-and-pacelc-in-practice.md) | 🎥 Coming soon |
+| Rate limiting & backpressure | [Read →](./rate-limiting-and-backpressure.md) | 🎥 Coming soon |
+| Distributed locking & coordination | [Read →](./distributed-locking-and-coordination.md) | 🎥 Coming soon |
+| Load balancing strategies | [Read →](./load-balancing-strategies.md) | 🎥 Coming soon |
+| Database replication & failover | [Read →](./database-replication-and-failover.md) | 🎥 Coming soon |
 
 ## Format every doc follows
 
