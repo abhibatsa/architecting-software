@@ -59,9 +59,23 @@ justifies paying the latency cost for consistency. A "users currently
 online" counter doesn't. Most production systems are a deliberate mix,
 not a single CAP classification stamped on the whole architecture.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- Classify every data field's consistency requirement explicitly at
+  design time — don't let it default to whatever the database happens to
+  offer.
+- Test the failure scenario directly: kill a node mid-write in staging and
+  confirm the system behaves the way you assumed, rather than trusting
+  the theory.
+- Document the CP/AP (or PC/EC) stance per service in the architecture
+  doc — this is exactly the kind of decision that gets forgotten and
+  silently violated by the next engineer who touches the code.
+- Revisit the classification whenever a system goes multi-region — cross-
+  region latency makes the consistency-vs-latency trade-off far more
+  expensive than it was single-region.
+- Don't default to strong consistency "to be safe" — it has a real,
+  ongoing latency cost, and applying it where it isn't needed is itself a
+  design mistake, not a conservative one.
 
 ---
 

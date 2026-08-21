@@ -66,9 +66,22 @@ occasional double-run is a minor inefficiency, not a correctness
 disaster. Use ZooKeeper/etcd-grade coordination, with fencing tokens, when
 double-execution has real consequences.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Use fencing tokens whenever double-execution has real consequences** —
+  the lock protecting the common case isn't the same as the resource
+  rejecting a stale holder
+- **Match the tool to the actual risk** — a Redis lock is fine for
+  "probably one cron instance"; use ZooKeeper/etcd-grade coordination when
+  correctness genuinely can't be compromised
+- **Set TTLs conservatively longer than worst-case pause time**, and
+  monitor for near-misses (locks that almost expired mid-operation) as an
+  early warning signal
+- **Design for lock-acquisition failure explicitly** — what does the
+  system do if it *can't* get the lock? Retry, queue, or fail loudly —
+  pick one on purpose, don't leave it undefined
+- **Keep the critical section as short as possible** — the longer you
+  hold a lock, the more surface area for the pause problem to bite
 
 ---
 

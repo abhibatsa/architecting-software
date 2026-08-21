@@ -58,9 +58,20 @@ must be **idempotent** (see
 processing the same message twice should be safe, because it will
 eventually happen.
 
-## What we'd do differently
+## Best Practices
 
-*ToDO*
+- **Default to a queue unless you have a specific fan-out or replay
+  need** — reaching for a stream by default adds consumer-group
+  complexity most single-worker tasks don't need
+- **Make every consumer idempotent, regardless of which you pick** —
+  at-least-once delivery means duplicates will happen eventually
+- **Set explicit retention/TTL policies** on both queues and streams —
+  don't rely on broker defaults that may not match your actual replay or
+  audit requirements
+- **Monitor consumer lag, not just queue/topic depth** — depth alone
+  doesn't tell you if a specific consumer is falling behind
+- **Use dead-letter queues for poison messages** so one malformed event
+  can't block an entire consumer indefinitely
 
 ---
 

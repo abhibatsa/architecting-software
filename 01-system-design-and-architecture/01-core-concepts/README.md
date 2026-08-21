@@ -2,7 +2,9 @@
 
 Production-grounded explainers on the building blocks of system design —
 each one follows the same format: what it is, when it matters in
-production, a real example, common mistakes, and a trade-offs table.
+production, a real example, common mistakes, a trade-offs table, and a
+**Best Practices** section (or, where a real production story exists,
+**What we'd do differently**).
 
 Each topic also has a matching short video — see the 🎥 column below.
 
@@ -31,9 +33,10 @@ Each topic also has a matching short video — see the 🎥 column below.
 3. **A real example** from something actually built
 4. **Common mistakes** seen or made
 5. **Trade-offs table** (option vs. when to use it)
-6. **What we'd do differently** — the non-negotiable section; this is
-   what separates the repo from a generic write-up
+6. **Best Practices** — genuinely useful, defensible guidance for the
+   topic. Where a real production incident exists to draw on instead,
+   that section becomes **What we'd do differently** — a real story, not
+   a placeholder. Don't fake the latter; "Best Practices" is the honest
+   default for evergreen concept docs.
 
-Next up: `cap-and-pacelc-in-practice.md` — a direct trade-off made in a
-real payment system, and one of the two concepts engineers get most
-confidently wrong (idempotency being the other, already live above).
+All 13 topics above are now published, complete with diagrams.

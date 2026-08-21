@@ -70,9 +70,22 @@ heavy client's traffic all lands on one server. If session affinity is
 required, pair it with a session store (Redis, etc.) so any server can
 serve any session, instead of hard-pinning by IP.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Use deep health checks, not process pings** — a server that responds
+  to a ping while unable to reach its own database will happily keep
+  taking traffic under a shallow check
+- **Avoid sticky sessions unless truly necessary**, and pair them with a
+  shared session store if you do — hard-pinning by IP turns "load
+  balanced" into "accidentally unbalanced" the moment one client is heavy
+- **Weight servers explicitly during rolling deploys** when instance
+  specs temporarily differ, rather than letting round robin treat them
+  as equal
+- **Monitor per-backend latency**, not just the aggregate — an aggregate
+  average can hide one consistently slow server dragging down a subset of
+  users
+- **Test load balancer failover itself**, not just backend failover — the
+  LB is a single point of failure too if it isn't set up in HA
 
 ---
 

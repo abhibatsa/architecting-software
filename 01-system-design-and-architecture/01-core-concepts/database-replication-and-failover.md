@@ -71,9 +71,19 @@ instead — same underlying trade-off as
 [`consistency-models-strong-vs-eventual.md`](./consistency-models-strong-vs-eventual.md),
 applied specifically to the replication layer.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Choose sync/async replication per data criticality, not as one
+  cluster-wide default** — a payments ledger and an activity log don't
+  share the same acceptable data-loss window
+- **Automate failover, but alert loudly when it fires** — silent
+  auto-failover hides a real incident that still needs a human to review
+- **Test failover regularly** (game days, chaos testing), don't wait for
+  a real outage to discover the runbook doesn't work
+- **Have an explicit failback runbook** — reintroducing a recovered old
+  leader without reconciliation is how stale data quietly comes back
+- **Monitor replication lag as a first-class metric** — it's the number
+  that tells you how much a failover right now would actually cost you
 
 ---
 

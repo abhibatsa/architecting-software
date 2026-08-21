@@ -11,16 +11,6 @@ your data got too big for a disk, but because write throughput on one node
 has a ceiling, and you've hit it. Vertical scaling (a bigger machine) buys
 you time, not a solution.
 
-## Understanding the Terms: Partitioning vs. Sharding
-
-Before diving into multi-node architectures, it helps to clear up common terminology:
-
-Partitioning generally refers to splitting a logical database or table into smaller pieces 
-within the same instance (e.g., table partitioning by date ranges on a single Postgres server).
-
-Sharding (Horizontal Partitioning) takes it a step further: it distributes those physical 
-partitions across entirely separate database instances/nodes.
-
 ## What sharding actually is
 
 Sharding — also called horizontal partitioning — splits your data across
@@ -59,21 +49,27 @@ signup date, or a single high-traffic tenant ID in a multi-tenant system).
 
 Even with a hash function in place, a poorly chosen shard key can still
 concentrate traffic — for example, sharding by `tenant_id` in a B2B SaaS
-product where one enterprise customer generates 40% of total traffic. 
-
-The hash spreads *keys* evenly; it doesn't know or care that one key's traffic
+product where one enterprise customer generates 40% of total traffic. The
+hash spreads *keys* evenly; it doesn't know or care that one key's traffic
 volume dwarfs the others. That's a design conversation that has to happen
 before the shard key is chosen, not after the hot shard starts paging you.
 
-## System Design Takeaways for Shard Key Selection
+## Best Practices
 
-1. Never shard on low-cardinality columns (e.g., status fields like active = true/false or country codes if 90% of users are in one country).
-2. Account for data skew early by forecasting your power-law users or high-traffic enterprise accounts.
-3. Design for query patterns first: If 95% of your queries filter by user_id, make that your primary sharding dimension.
-
-## What we'd do differently
-
-*ToDo*
+- **Choose a shard key that scales, not one that's convenient today** —
+  a naturally growing, evenly-distributed attribute ages better than
+  anything tied to signup date or a single dominant tenant
+- **Plan for resharding from day one**, even if you don't implement it
+  immediately — the migration path is far easier to design before you
+  need it under pressure
+- **Monitor per-shard load distribution continuously** — a hash function
+  spreading keys evenly doesn't guarantee even traffic if key *volume*
+  varies wildly
+- **Use consistent hashing over simple modulo hashing** — it minimizes
+  how much data has to move when you add or remove shards
+- **Avoid shard keys correlated with a single dominant entity** (one huge
+  tenant, one viral user) — that's the most common way a "balanced" hash
+  still produces a hot shard
 
 ---
 

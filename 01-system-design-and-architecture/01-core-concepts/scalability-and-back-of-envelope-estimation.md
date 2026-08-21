@@ -74,9 +74,21 @@ it instead of waiting for perfect data that never comes. An architecture
 review with rough-but-directionally-right numbers beats one with none at
 all, every time.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Always compute peak, not just average** — the average tells you the
+  typical load, the peak tells you what you actually need to survive
+- **State assumptions explicitly in the estimate itself** — "assuming 3x
+  peak multiplier" is a note future-you (or a teammate) needs, not
+  something to leave implicit
+- **Re-run the estimate before every major feature launch**, not just
+  once at initial design — traffic patterns and data shapes drift
+- **Track actual vs. estimated after launch** — this is how estimation
+  skill actually improves; treat every estimate as a hypothesis to check
+  against reality
+- **Round generously and say so** — a `~` in front of a number is more
+  honest and more useful than false precision from an estimate that was
+  never going to be exact anyway
 
 ---
 

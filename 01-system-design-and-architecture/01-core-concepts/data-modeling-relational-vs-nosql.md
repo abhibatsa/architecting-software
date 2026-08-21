@@ -56,9 +56,19 @@ consistency, with a denormalized read-optimized store (cache, search index,
 or NoSQL projection) for the high-traffic read paths. Treat "relational vs
 NoSQL" as a per-table decision, not a whole-system one.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- Default to relational unless you have a proven, stable access pattern —
+  it's far cheaper to denormalize later than to discover you need a join
+  a NoSQL schema can't cheaply give you.
+- Measure actual query patterns in production before denormalizing —
+  don't model for an access pattern you're only assuming will happen.
+- Keep one clear system of record, even when read-optimized projections
+  (a cache, a search index, a NoSQL read model) exist alongside it —
+  ambiguity about which store is "correct" during a disagreement is a
+  common source of hard-to-debug data bugs.
+- Treat "relational vs NoSQL" as a per-table decision on a mature system,
+  not a single choice made once at the start of a project.
 
 ---
 

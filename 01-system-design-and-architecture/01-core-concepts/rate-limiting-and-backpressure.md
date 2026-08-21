@@ -63,9 +63,20 @@ limit is hit, instead of returning a proper `429 Too Many Requests` with a
 guessing game — well-behaved clients can't self-correct if they don't know
 they've been throttled.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Always return `429` + `Retry-After`**, never silently drop — a
+  well-behaved client can't back off correctly if it doesn't know it was
+  throttled
+- **Rate limit at multiple layers** (client SDK, API gateway, service
+  itself) — a single layer is a single point of failure for protection
+- **Use token bucket for anything with legitimate bursty traffic** —
+  fixed windows punish normal usage patterns unnecessarily
+- **Build backpressure into internal service contracts explicitly**, not
+  just external-facing APIs — internal services overwhelming each other
+  is just as real a failure mode
+- **Load test to find the actual breaking point** rather than guessing
+  limits from theory — the real ceiling is rarely where the math predicts
 
 ---
 

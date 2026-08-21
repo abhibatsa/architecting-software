@@ -48,9 +48,21 @@ The mistake most systems make isn't picking the wrong model overall — it's
 applying one model uniformly across data that has genuinely different
 correctness requirements.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- Classify each data field's consistency need explicitly — strong,
+  read-your-own-writes, or eventual — rather than inheriting whatever the
+  database's default happens to be.
+- For anything in the "strong" tier, verify the guarantee under real
+  concurrent load in staging, not just in isolated unit tests.
+- For "read-your-own-writes," make sure the routing (session affinity to
+  a specific replica, or reading from the primary right after a write)
+  is implemented deliberately — it's easy to assume you have this
+  property when you actually don't.
+- Revisit these classifications whenever a system scales into
+  multi-region — cross-region replication lag turns "eventual, usually
+  fast" into "eventual, sometimes seconds," and downstream assumptions
+  built for the fast case can break.
 
 ---
 

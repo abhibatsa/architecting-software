@@ -60,10 +60,22 @@ example), LRU can evict genuinely hot data during that scan. LFU (least
 frequently used) or a hybrid (like LRU with a frequency-aware admission
 policy) handles that case better, at the cost of more bookkeeping.
 
-## What we'd do differently
+## Best Practices
 
-*(Fill this in with a real story once you've shipped this in production —
-this section is what separates the post from a textbook definition.)*
+- Set TTL per data type, never globally — a single config value is
+  simultaneously too aggressive for slow-changing data and too loose for
+  fast-changing data.
+- For anything correctness-sensitive (inventory counts, pricing at
+  checkout), prefer explicit invalidation on write over relying on TTL
+  expiry alone.
+- Guard against cache stampede: when a hot key expires, use a short lock
+  or request-coalescing so one cache miss doesn't trigger a hundred
+  simultaneous DB reads.
+- Track cache hit rate as a first-class metric, not an afterthought — a
+  silently dropping hit rate is usually the first sign of a sizing or
+  invalidation bug.
+- Never let the cache become the source of truth by accident — if the
+  cache is flushed, the system should still be correct, just slower.
 
 ---
 

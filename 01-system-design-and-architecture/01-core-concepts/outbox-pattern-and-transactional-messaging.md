@@ -67,9 +67,19 @@ Forgetting to clean up the outbox table. Published events should be
 marked processed (or deleted) after confirmed delivery — an outbox table
 that grows forever becomes its own performance problem.
 
-## What we'd do differently
+## Best Practices
 
-*ToDo*
+- **Always add a cleanup/archival job for processed outbox rows** — an
+  outbox table that grows forever becomes its own performance problem
+- **Index the outbox table on `(processed, created_at)`** so the poller
+  can find new rows without scanning the whole table as it grows
+- **Prefer CDC (e.g. Debezium) over polling once volume justifies it** —
+  lower latency and less load on the database than a polling loop
+- **Version the outbox event payload schema** from day one — consumers
+  will need to handle schema evolution eventually, plan for it early
+- **Alert on outbox table growth** as an early warning signal — a
+  growing backlog usually means the publisher process is stuck, not that
+  traffic increased
 
 ---
 
