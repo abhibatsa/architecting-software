@@ -22,11 +22,11 @@ so you can star/fork only what you need.
 |---|------|--------|--------|
 | 01 | [System Design & Architecture](./01-system-design-and-architecture) | 🟢 Live (Wave 1) | Core concepts, database fundamentals, fintech/wealthtech/insuretech case studies, APIs & microservices, architectural patterns, interview prep |
 | 02 | Cloud Architecture | 🔜 Wave 2 | AWS/GCP/Azure patterns, multi-cloud, cost architecture |
-| 03 | Quality Engineering & SRE | 🔜 Wave 2 | Reliability engineering, SLOs, incident response |
-| 04 | Observability & Monitoring | 🔜 Wave 2 | Dashboards, tracing, alerting design |
+| 03 | [QA, Quality Engineering & Quality Management](https://github.com/abhibatsa/qa-quality-engineering-hub) | 🟢 Live | QA/QE process, test automation frameworks, defect & test management, reporting, log monitoring, AI-QA — SRE moved to Observability & Monitoring below |
+| 04 | Observability & Monitoring | 🔜 Wave 2 | Dashboards, tracing, alerting design, SRE, SLOs, incident response, reliability engineering |
 | 05 | DevSecOps | 🔜 Wave 2 | Secure CI/CD, shift-left security |
 | 06 | [R&D — ML, DL, AI & LLMs](https://github.com/abhibatsa/rnd-ai-ml-llm) | 🟢 Live | ML/DL fundamentals, data science, information retrieval, NLP/LLMs, agentic AI & GenAI, prompt engineering, case studies, interview prep |
-| 07 | Infosec, Pentesting & VAPT | 🔜 Wave 4 | Ethical hacking, VAPT methodology |
+| 07 | [Infosec, Pentesting & VAPT](https://github.com/abhibatsa/cybersecurity-infosec-pentest-prep) | 🟢 Live | Ethical hacking, VAPT methodology |
 | 08 | Networking & OSI | 🔜 Wave 5 | Networking fundamentals for architects |
 | 09 | Linux for Engineers | 🔜 Wave 5 | Systems fundamentals |
 | 10 | Python / Java / TypeScript for Architects | 🔜 Wave 5 | Language-level design patterns |
@@ -63,9 +63,14 @@ ai-test-engineering-career-prep  → AI Test Engineer
 ```
 
 - [`rnd-ai-ml-llm`](https://github.com/abhibatsa/rnd-ai-ml-llm) — ML/DL/AI/LLM reference layer, used across the AI-adjacent repos
+- [`lld-and-ood-interview-prep`](https://github.com/abhibatsa/lld-and-ood-interview-prep) — OOP, design patterns, UML, concurrency, LLD interview problems; pairs directly with this repo's HLD/system design content
+- [`qa-quality-engineering-hub`](https://github.com/abhibatsa/qa-quality-engineering-hub) — the QA/QE practitioner reference (process, tooling, AI-QA); see row 03 above
 - [`sdet-automation-career-prep`](https://github.com/abhibatsa/sdet-automation-career-prep) — manual tester → SDET/Automation Engineer → Lead
 - [`ai-test-engineering-career-prep`](https://github.com/abhibatsa/ai-test-engineering-career-prep) [restricted access/ premium access] — SDET → AI Test Engineer
-- More planned: `sde-career-prep`, `fde-career-prep`, `ai-engineer-career-prep`
+- [`sde-career-prep`](https://github.com/abhibatsa/sde-career-prep) — Software Engineer career ladder, cross-linking this repo, the LLD repo, and coding-round content
+- [`fde-career-prep`](https://github.com/abhibatsa/fde-career-prep) [restricted access/ premium access] — Forward Deployed Engineer career prep
+- [`claude-way-of-coding`](https://github.com/abhibatsa/claude-way-of-coding) — patterns for working with Claude Code, Cowork, and Skills effectively
+- More planned: `ai-engineer-career-prep`
 
 ## 🤝 Contributing
 
